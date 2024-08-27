@@ -10,6 +10,9 @@ app.use(express.json());
 app.post('/send-email', async (req, res) => {
   const { email, name, message } = req.body;
 
+  // 요청이 서버에 도달했는지 확인하기 위해 로그 추가
+  console.log('Received request:', req.body);
+
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
