@@ -1,10 +1,12 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
+const cors = require('cors'); // cors 추가
 require('dotenv').config();
 
 const app = express();
 const port = 3000;
 
+app.use(cors()); // cors 미들웨어 추가
 app.use(express.json());
 
 app.post('/send-email', async (req, res) => {
