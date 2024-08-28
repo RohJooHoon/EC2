@@ -4,7 +4,7 @@ const cors = require('cors'); // cors 추가
 require('dotenv').config();
 
 const app = express();
-const port = 3000;
+const port = 3100;
 
 app.use(cors()); // cors 미들웨어 추가
 app.use(express.json());
