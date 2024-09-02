@@ -9,7 +9,7 @@
 - **my sql** : SQL 데이터 관리
 - **node.js** : API 개발
 - **caddy** : HTTPS연결을 위해 caddy로 SSL인증 서버 실행
-- **Nginx** : SSL 인증 서버 경로 외부 접속 포트와 연결
+- **Nginx** : SSL 인증 서버 경로 접근시 내부 HTTPS 포트 연결
 
 ## 명령어
 
@@ -18,6 +18,8 @@
 - **pm2 list** : 실행중인 어플리케이션 리스트 확인
 - **pm2 stop EC2** : 실행중인 EC2 어플리케이션 종료
 - **pm2 delete EC2** : 실행중인 EC2 어플리케이션 제거
+- **sudo nano /etc/nginx/sites-available/default** : Nginx 파일 수정
+- **sudo nano /etc/caddy/Caddyfile** : Caddyfile 파일 수정
 - **sudo lsof -i :2019** : 2019번 포트 사용중인 서버 확인
 - **sudo pkill -f caddy** : Command명 "caddy" 서버 종료
 
